@@ -1,6 +1,7 @@
 # Easy Multiple Number Separator
 
-Easy Number Separator is a useful pure JavaScript plugin for currency format and separate numbers on input.
+Easy Number Separator is a useful pure JavaScript plugin for currency format and separate numbers on input.<br>
+Easy Multiple Number Separator adds the ability to create more than one `resultInput`
 
 ### <a href="https://amiryxe.github.io/easy-number-separator/" target="_blank">View Demo</a>
 
@@ -46,14 +47,21 @@ If you want to send data to the server, you can set a result input by `resultInp
 
 ##### HTML:
 ```html
-<input type="text" id="result_input" name="">
+<input type="text" class="number-separator" id="min_price_separator">
+<input type="hidden" id="min_price" name="min_price">
+
+<input type="text" class="number-separator" id="max_price_separator">
+<input type="hidden" id="max_price" name="max_price">
 ```
 ##### JavaScript:
 ```javascript
 easyNumberSeparator({
     selector: '.number-separator',
     separator: ',',
-    resultInput: '#result_input',
+    resultInput: [
+        {'#min_price_separator': '#min_price'},
+        {'#max_price_separator': '#max_price'}
+    ],
 })
 ```
 
