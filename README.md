@@ -1,4 +1,4 @@
-# Easy Number Separator
+# Easy Multiple Number Separator
 
 Easy Number Separator is a useful pure JavaScript plugin for currency format and separate numbers on input.
 
